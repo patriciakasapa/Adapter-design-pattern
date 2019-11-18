@@ -1,14 +1,15 @@
 package adapter;
 
 public class HDMIAdapter extends HDMIMonitor{
-    private VGAMonitor monitor;
+    private VGAMonitor vgaMonitor;
 
     public HDMIAdapter(VGAMonitor vgaMonitor) {
-        this.monitor = vgaMonitor;
+        this.vgaMonitor = vgaMonitor;
     }
 
     @Override
     public void hdmiDisplay() {
-        monitor.vgaDisplay();
+        System.out.println("Using an adapter: ");
+        vgaMonitor.vgaDisplay();
     }
 }

@@ -9,5 +9,8 @@ public class Main {
         pi.display(new HDMIMonitor());
 
         // pi.display(new VGAMonitor());
+        //
+        // Using adapter so that vga is compatible
+
     }
 }
