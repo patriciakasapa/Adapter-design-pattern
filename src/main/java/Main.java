@@ -1,3 +1,4 @@
+import adapter.HDMIAdapter;
 import adapter.HDMIMonitor;
 import adapter.RaspberryPi;
 import adapter.VGAMonitor;
@@ -11,6 +12,8 @@ public class Main {
         // pi.display(new VGAMonitor());
         //
         // Using adapter so that vga is compatible
-
+        VGAMonitor vgaMonitor = new VGAMonitor();
+        HDMIAdapter adapter = new HDMIAdapter(vgaMonitor);
+        pi.display(adapter);
     }
 }
